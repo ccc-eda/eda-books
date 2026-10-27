@@ -1,0 +1,45 @@
+module Counter (
+    i_clk  : input  clock   ,
+    i_rst  : input  reset   ,
+    i_en   : input  logic   ,
+    o_count: output logic<4>,
+) {
+    var count: logic<4>;
+
+    always_ff {
+        if_reset {
+            count = 0;
+        } else if i_en {
+            count += 1;
+        }
+    }
+
+    assign o_count = count;
+}
+
+#[test(test_counter)]
+module TestCounter {
+    inst clk: $tb::clock_gen;
+    inst rst: $tb::reset_gen(clk);
+
+    var en   : logic   ;
+    var count: logic<4>;
+
+    inst dut: Counter (
+        i_clk  : clk  ,
+        i_rst  : rst  ,
+        i_en   : en   ,
+        o_count: count,
+    );
+
+    initial {
+        en = 1;
+        rst.assert();
+        clk.next(5);
+        $assert(count == 4'd5);
+        en = 0;
+        clk.next(3);
+        $assert(count == 4'd5);
+        $finish();
+    }
+}

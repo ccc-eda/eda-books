@@ -1,0 +1,37 @@
+{
+  "creator": "veryl-eda 2.1.0",
+  "modules": {
+    "Counter": {
+      "attributes": { "top": "00000000000000000000000000000001" },
+      "ports": {
+        "i_clk": { "direction": "input", "bits": [2] },
+        "i_rst": { "direction": "input", "bits": [3] },
+        "i_en": { "direction": "input", "bits": [4] },
+        "o_count": { "direction": "output", "bits": [5, 6, 7, 8] }
+      },
+      "cells": {
+        "$veryl$0": { "hide_name": 1, "type": "$_NOT_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "Y": "output" }, "connections": { "A": [5], "Y": [9] } },
+        "$veryl$1": { "hide_name": 1, "type": "$_MUX_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "S": "input", "Y": "output" }, "connections": { "A": [5], "B": [9], "S": [4], "Y": [10] } },
+        "$veryl$2": { "hide_name": 1, "type": "$_XOR_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "Y": "output" }, "connections": { "A": [5], "B": [6], "Y": [11] } },
+        "$veryl$3": { "hide_name": 1, "type": "$_MUX_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "S": "input", "Y": "output" }, "connections": { "A": [6], "B": [11], "S": [4], "Y": [12] } },
+        "$veryl$4": { "hide_name": 1, "type": "$_AND_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "Y": "output" }, "connections": { "A": [5], "B": [6], "Y": [13] } },
+        "$veryl$5": { "hide_name": 1, "type": "$_XOR_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "Y": "output" }, "connections": { "A": [7], "B": [13], "Y": [14] } },
+        "$veryl$6": { "hide_name": 1, "type": "$_MUX_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "S": "input", "Y": "output" }, "connections": { "A": [7], "B": [14], "S": [4], "Y": [15] } },
+        "$veryl$7": { "hide_name": 1, "type": "$_AND_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "Y": "output" }, "connections": { "A": [7], "B": [13], "Y": [16] } },
+        "$veryl$8": { "hide_name": 1, "type": "$_XOR_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "Y": "output" }, "connections": { "A": [8], "B": [16], "Y": [17] } },
+        "$veryl$9": { "hide_name": 1, "type": "$_MUX_", "parameters": {  }, "attributes": {  }, "port_directions": { "A": "input", "B": "input", "S": "input", "Y": "output" }, "connections": { "A": [8], "B": [17], "S": [4], "Y": [18] } },
+        "$veryl$10": { "hide_name": 1, "type": "$_DFF_PN0_", "parameters": {  }, "attributes": {  }, "port_directions": { "C": "input", "D": "input", "R": "input", "Q": "output" }, "connections": { "C": [2], "D": [10], "R": [3], "Q": [5] } },
+        "$veryl$11": { "hide_name": 1, "type": "$_DFF_PN0_", "parameters": {  }, "attributes": {  }, "port_directions": { "C": "input", "D": "input", "R": "input", "Q": "output" }, "connections": { "C": [2], "D": [12], "R": [3], "Q": [6] } },
+        "$veryl$12": { "hide_name": 1, "type": "$_DFF_PN0_", "parameters": {  }, "attributes": {  }, "port_directions": { "C": "input", "D": "input", "R": "input", "Q": "output" }, "connections": { "C": [2], "D": [15], "R": [3], "Q": [7] } },
+        "$veryl$13": { "hide_name": 1, "type": "$_DFF_PN0_", "parameters": {  }, "attributes": {  }, "port_directions": { "C": "input", "D": "input", "R": "input", "Q": "output" }, "connections": { "C": [2], "D": [18], "R": [3], "Q": [8] } }
+      },
+      "netnames": {
+        "i_clk": { "hide_name": 0, "bits": [2], "attributes": {} },
+        "i_rst": { "hide_name": 0, "bits": [3], "attributes": {} },
+        "i_en": { "hide_name": 0, "bits": [4], "attributes": {} },
+        "o_count": { "hide_name": 0, "bits": [5, 6, 7, 8], "attributes": {} },
+        "count": { "hide_name": 0, "bits": [5, 6, 7, 8], "attributes": {} }
+      }
+    }
+  }
+}

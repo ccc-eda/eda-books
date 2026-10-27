@@ -1,0 +1,7 @@
+set_io i_clk 35
+set_io i_rst 10
+set_io i_en 20
+set_io o_count[0] 26
+set_io o_count[1] 27
+set_io o_count[2] 25
+set_io o_count[3] 23
