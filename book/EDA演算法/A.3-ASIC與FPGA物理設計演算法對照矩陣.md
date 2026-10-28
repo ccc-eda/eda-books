@@ -7,7 +7,7 @@
 | 階段 | ASIC 核心演算法 | FPGA 核心演算法 | 優化目標差異 | 代表工具 / 論文 |
 |---|---|---|---|---|
 | Logic optimization | AIG-based resub、SAT sweeping、rewrite/refactor（ABC） | LUT-level resynthesis、cut-based restructure（ `abc -d lutpack`、UTPack） | 最小化 gate/級數 vs. 最小化 LUT 數與 LUT 深度 | Mishchenko ABC；Cong & Hwang UCB |
-| Technology mapping | 標準單元覆蓋（cut-covering、SIS、`amap`、`&nf`） | cut enumeration + 覆蓋（CutMap、FlowMap、T-VPack packing） | area/delay 對 cell library vs. $k$-LUT 覆蓋 | Cong & Ding FlowMap 1994；Berkeley SIS |
+| Technology mapping | 標準單元覆蓋（cut-covering、SIS、`amap`、`&nf`） | cut enumeration + 覆蓋（CutMap、FlowMap、T-VPack packing） | area/delay 對 cell library vs. $`k`$ -LUT 覆蓋 | Cong & Ding FlowMap 1994；Berkeley SIS |
 | Partitioning | 多層次 hypergraph partition（hMETIS、KaHyPar、F-M/K-L） | 同源，但以 LUT/CLB 為單位，接 packing（T-VPack、AAPack） | 切割數、edge cut vs. LUT/CLB 資源 + inter-CLB wire 數 | Fiduccia–Mattheyses 1982；Karypis hMETIS 1997 |
 | Floorplanning | 連續區域規劃（B*-tree、sequence pair、SA、analytic mixed-size） | 幾乎不存在；硬巨集（BRAM/DSP）由 arch 固定位置，僅做 macro assignment | macro 位置與 blocked 區 vs. 固定資源網格 | Chang, Cong B*-tree 2000；Murata sequence pair 1995 |
 | Global placement | 連續全域：analytic（ePlace/RePlAce、RePlAce 電場模型）、quadratic（FastPlace、mPL6）+ SA 混合 | 離散模擬退火（VPR T-Place）、analytic 輔助（Analytical placer for FPGA、UTPlace-F） | HPWL + congestion + timing vs. CLB/LUT 佔用 + 可繞性 | Chang ePlace ICCAD'15；Betz & Rose VPR 1997 |

@@ -199,25 +199,31 @@
 
 ## 數學與公式慣例（補充）
 
-本書的公式（$$...$$）用到的量，對應的術語：
+本書的公式（
+
+$$
+...
+$$
+
+）用到的量，對應的術語：
 
 | 符號 | 繁體 | English | 出現處 |
 |---|---|---|---|
-| $F_{\max}$ | 最高頻率 | maximum frequency | STA：$F_{\max} = 1 / T_{\text{critical}}$ |
-| $T_{\text{clk}}$ | 時脈週期 | clock period | 12 MHz → 83.3 ns |
-| $t_{\text{setup}}$ | 建立時間 | setup time | Liberty 約束 |
-| $t_{\text{hold}}$ | 維持時間 | hold time | hold slack |
-| $c$ | 負載 | load capacitance | NLDM 的第二維 |
-| $s$ | 輸入轉換 | input transition | NLDM 的第一維 |
-| $T$ | 週期數 | cycle count | ISS 的 cycles |
-| $\text{cpb}$ | 每位元時脈數 | clocks per bit | $12\,\text{MHz} / 115200 \approx 104$ |
-| $\text{duty}$ | 責任週期 | duty cycle | 高拍數 / 窗口 |
-| $\bar{c}$ | 每拍平均求值數 | average evals per cycle | board_speed 的 evals/cycle |
-| $L$ | LUT 總數 | LUT count | 與 $\bar{c}$ 對比 |
-| $W$ | 線長 | wirelength | 佈局成本的主要項 |
-| $u$ | 利用率 | utilization | cell 面積 / 可用面積 |
-| $\text{slack}$ | 鬆弛 | slack | 需求 − 到達 |
-| $N_{\text{ovl}}$ | 溢流 | overflow | PathFinder 的收斂條件 |
+| $`F_{\max}`$ | 最高頻率 | maximum frequency | STA： $`F_{\max} = 1 / T_{\text{critical}}`$ |
+| $`T_{\text{clk}}`$ | 時脈週期 | clock period | 12 MHz → 83.3 ns |
+| $`t_{\text{setup}}`$ | 建立時間 | setup time | Liberty 約束 |
+| $`t_{\text{hold}}`$ | 維持時間 | hold time | hold slack |
+| $`c`$ | 負載 | load capacitance | NLDM 的第二維 |
+| $`s`$ | 輸入轉換 | input transition | NLDM 的第一維 |
+| $`T`$ | 週期數 | cycle count | ISS 的 cycles |
+| $`\text{cpb}`$ | 每位元時脈數 | clocks per bit | $`12\,\text{MHz} / 115200 \approx 104`$ |
+| $`\text{duty}`$ | 責任週期 | duty cycle | 高拍數 / 窗口 |
+| $`\bar{c}`$ | 每拍平均求值數 | average evals per cycle | board_speed 的 evals/cycle |
+| $`L`$ | LUT 總數 | LUT count | 與 $`\bar{c}`$ 對比 |
+| $`W`$ | 線長 | wirelength | 佈局成本的主要項 |
+| $`u`$ | 利用率 | utilization | cell 面積 / 可用面積 |
+| $`\text{slack}`$ | 鬆弛 | slack | 需求 − 到達 |
+| $`N_{\text{ovl}}`$ | 溢流 | overflow | PathFinder 的收斂條件 |
 
 ## 總索引（英→繁）
 
